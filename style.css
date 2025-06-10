@@ -18,7 +18,7 @@ body {
 }
 
 .espacamento {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .titulo {
@@ -32,12 +32,12 @@ body {
 }
 
 .logo img {
-  width: 150px;
+  width: 200px;
   height: auto;
 }
 
 .espaco-orcamento {
-  min-height: 400px;
+  min-height: 200px;
   margin: 40px 0;
   border: none;
   outline: none;
