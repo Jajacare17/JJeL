@@ -1,15 +1,16 @@
 const textarea = document.getElementById('orcamento');
 
 function autoResize() {
-  // Redefine altura para capturar o scrollHeight corretamente
-  textarea.style.height = 'auto';
-  textarea.style.height = textarea.scrollHeight + 'px';
+  textarea.style.height = 'auto'; // Resetar
+  textarea.style.height = textarea.scrollHeight + 'px'; // Ajustar conforme conteúdo
 }
 
-// Aciona o redimensionamento em diferentes eventos
+// Aplica ao digitar ou colar
 textarea.addEventListener('input', autoResize);
 textarea.addEventListener('paste', () => setTimeout(autoResize, 0));
-window.addEventListener('load', autoResize); // Caso o textarea venha preenchido
+
+// Aplica ao carregar (caso já tenha texto)
+window.addEventListener('load', autoResize);
 
 function gerarPDF() {
   window.print();
