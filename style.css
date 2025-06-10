@@ -38,7 +38,7 @@ body {
 
 .espaco-orcamento {
   min-height: 400px;
-  margin: 40px;
+  margin: 40px 0;
   border: none;
   outline: none;
   width: 100%;
@@ -92,33 +92,6 @@ body {
 
 @media print {
   .btn-pdf {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  body {
-    padding: 20px;
-  }
-
-  .documento {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  .espaco-orcamento {
-    margin: 20px 0;
-    min-height: 200px;
-    font-size: 16px;
-  }
-
-  .logo img {
-    width: 100px;
-  }
-
-  .btn-pdf {
-    bottom: 15px;
-    right: 15px;
-    padding: 10px 12px;
-    font-size: 13px;
-  }
+    display: none;
+  }
 }
