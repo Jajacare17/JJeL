@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documento JJ & L</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: white;
+      margin: 0;
+      line-height: 1.8;
+    }
+    
+    .documento {
+      max-width: 210mm;
+      margin: 0 auto;
+      font-size: 14px;
+      position: relative;
+    }
+    
+    .centro {
+      text-align: center;
+    }
+    
+    .espacamento {
+      margin-bottom: 20px;
+    }
+    
+    .titulo {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .logo img {
+      width: 250px;
+      height: auto;
+    }
+    
+    .espaco-orcamento {
+      min-height: 400px;
+      margin: 40px 0;
+      border: none;
+      outline: none;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.8;
+      resize: none;
+      background: transparent;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    .assinatura {
+      text-align: center;
+      margin-top: 60px;
+    }
+    
+    .assinatura img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    
+    .nome-assinatura {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    
+    .telefone-assinatura {
+      font-size: 14px;
+    }
+    
+    .btn-pdf {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .btn-pdf:hover {
+      background-color: #f0f0f0;
+    }
+    
+    @media print {
+      .btn-pdf {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="documento">
+    <div class="logo">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20lenilson.jpg-kusGACCVz9133KdTSHN6yzAyRHoYv5.jpeg" alt="Logo JJ & L Reformas">
+    </div>
+    
+    <div class="centro espacamento">
+      <div class="titulo">RELATÓRIO DE DADOS CADASTRAIS</div>
+    </div>
+    
+    <div class="espacamento">
+      <div><strong>RAZÃO SOCIAL:</strong> JJ E L SANTOS PINTURA E REFORMAS LTDA-ME</div>
+      <div><strong>ENDEREÇO:</strong> RUA ROSA SEBASTIANY, 247 / OUTREIRO DO SÃO FERNANDO</div>
+      <div><strong>BAIRRO:</strong> VOTUPOCA &nbsp;&nbsp;&nbsp; <strong>CEP:</strong>06447-420</div>
+      <div><strong>CIDADE:</strong> BARUERI - SÃO PAULO – SP</div>
+      <div><strong>CNPJ:</strong> 50.708.475/0001-05</div>
+    </div>
+    
+    <div class="centro espacamento">
+      <div class="titulo">ORÇAMENTO PARA EXECUÇÃO DE TRABALHO</div>
+    </div>
+    
+    <textarea class="espaco-orcamento" id="orcamento" placeholder="Digite aqui o orçamento..."></textarea>
+    
+    <div class="assinatura">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/assinatura%20leonilson.jpg-sTrEnLRHelgI5sHRZlrxXmW9ei4y0I.jpeg" alt="Assinatura Lenilson Alves">
+      <div class="nome-assinatura">LENILSON ALVES DOS SANTOS</div>
+      <div class="telefone-assinatura">(11) 94911-9574</div>
+    </div>
+  </div>
+
+  <button class="btn-pdf" onclick="gerarPDF()">📄 Gerar PDF</button>
+
+  <script>
+    const textarea = document.getElementById('orcamento');
+    
+    function autoResize() {
+      textarea.style.height = 'auto';
+      textarea.style.height = Math.max(400, textarea.scrollHeight) + 'px';
+    }
+    
+    textarea.addEventListener('input', autoResize);
+    textarea.addEventListener('paste', function() {
+      setTimeout(autoResize, 0);
+    });
+    
+    // Inicializa com altura mínima
+    autoResize();
+    
+    function gerarPDF() {
+      window.print();
+    }
+  </script>
+</body>
+</html>
