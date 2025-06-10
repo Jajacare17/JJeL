@@ -18,7 +18,7 @@ body {
 }
 
 .espacamento {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .titulo {
@@ -28,11 +28,11 @@ body {
 
 .logo {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .logo img {
-  width: 150px;
+  width: 250px;
   height: auto;
 }
 
@@ -46,7 +46,7 @@ body {
   font-size: 14px;
   line-height: 1.8;
   resize: none;
-  background: tranparente;
+  background: transparent;
   padding: 0;
   overflow: hidden;
 }
@@ -92,6 +92,6 @@ body {
 
 @media print {
   .btn-pdf {
-    display: none;
-  }
+    display: none;
+  }
 }
